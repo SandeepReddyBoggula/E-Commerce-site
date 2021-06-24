@@ -1,0 +1,94 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>Restore page</title>  
+    {% load static %} 
+    <link rel="stylesheet"href="{% static 'css/style.css' %}"/>  
+</head>  
+<body>  
+<form method="POST" class="post-form" action="/restore_save/{{product.id}}">  
+        {% csrf_token %}  
+    <div class="container" style="text-align: center;">  
+<br>
+<div>
+  <p id="heading" style="color: tomato; text-align: center;font-weight: bolder;font-size: 2cm;font-style: italic;">
+      Sandeep.com
+  </p>
+  <div>
+    <img style="width: 25%;height:6cm;position: absolute;top:2%;left: 10%;" src="https://www.teahub.io/photos/full/115-1153347_cars-logo-transparent-background-png.png">
+  </div>
+  <div >
+    <img style="width: 30%;height: 6cm;position: absolute;top: 2%;right: 8%;" src="https://pngimg.com/uploads/rolls_royce/rolls_royce_PNG18.png">
+  </div>
+</div>
+<hr>
+<div>
+    <img src="https://gumlet.assettype.com/evoindia%2F2020-06%2F2046826f-8746-480f-be63-280532b56323%2FP90314087_highRes_rolls_royce_motor_ca.jpg?format=auto" style="width: 100%;height: 30cm;">
+    <div style="position:absolute ;top: 30%;right: 10%;"> 
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <h3 style="color:rgb(250, 6, 6); text-align: center ;font-weight: bold;font-size: 1.5cm;font-style: italic;">Restore Details</h3>  
+    </div>  
+  </div>
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label" style="color: red; text-align: center;font-weight: bold;font-size:  1cm;font-style: italic;">Product Image Link:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="product_img" id="id_product_img" style="padding: 0.5cm;text-align: center;font-size: large;font-style: italic;width: 5cm;" placeholder="Enter Product Image Link ........." required maxlength="10000" value="{{ product.product_img }}"/>  
+    </div>  
+  </div>   
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label" style="color: red; text-align: center;font-weight: bold;font-size:  1cm;font-style: italic;">Product Id:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="product_id" id="id_product_id" style="padding: 0.5cm;text-align: center;font-size: large;font-style: italic;width: 5cm;" placeholder="Enter Product ID ........." required maxlength="10" value="{{ product.product_id }}"/>  
+    </div>  
+  </div>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label" style="color: red; text-align: center;font-weight: bold;font-size:  1cm;font-style: italic;">product Name:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="product_name" id="id_product_name" style="padding: 0.5cm;text-align: center;font-size: large;font-style: italic;width: 5cm;" placeholder="Enter Product Name ........." required maxlength="30" value="{{ product.product_name }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label" style="color: red; text-align: center;font-weight: bold;font-size:  1cm;font-style: italic;">product price:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="product_price" id="id_product_price" style="padding: 0.5cm;text-align: center;font-size: large;font-style: italic;width: 5cm;" placeholder="Enter Product Price ........." required maxlength="20" value="{{ product.product_price }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label" style="color: red; text-align: center;font-weight: bold;font-size:  1cm;font-style: italic;">product manu:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="product_manu" id="id_product_manu" style="padding: 0.5cm;text-align: center;font-size: large;font-style: italic;width: 5cm;" placeholder="Enter Product manufacturer ........." required maxlength="20" value="{{ product.product_manu }}" />  
+    </div>  
+  </div>
+  <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+      <p id="button" style="color: red; text-align: center;font-weight: bold;font-size: 0.75 cm;font-style: italic;"><button type="submit" class="btn btn-success" style="padding: 10px;width: 10cm;background-color: tomato;font-size: x-large;font-style: italic;font-weight: bolder;color: white;">Save Record</button></p>
+    </div>  
+  </div>    
+    </div>
+  </div>
+  </div>   
+</form>
+<hr>
+<div id="d2" style="color: black;text-align: center;font-style: italic;font-weight:bolder;font-size: larger;">
+    <p id="d3" >
+        Sandeep.com Site: International - Español - Português - Deutsch - Français - Italiano - हिंदी - Pусский - 한국어 - 日本語 - اللغة العربية - ภาษาไทย - Türk - Nederlands - tiếng Việt - Indonesian - עברית
+    </p>
+    <p id="d3">
+        Sandeep Group | Taobao Marketplace | Tmall.com | Juhuasuan | AliExpress | Sandeep.com International | 1688.com | Alimama | Alitrip
+        Sandeep Cloud | YunOS | AliTelecom | HiChina | Autonavi | UCWeb | Umeng | Xiami | TTPod | Diandianchong | DingTalk | Alipay
+    </p>
+    <p id="d3">  
+        Product Listing Policy - Intellectual Property Protection - Privacy Policy - Terms of Use
+    </p>
+    <p id="d3">   
+        © 1999-2021 Sandeep.com. All rights reserved.
+    </p>
+</div>
+</body>
+</html>  
+</body>  
+</html>  

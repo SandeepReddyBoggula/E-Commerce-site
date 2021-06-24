@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deleted Records</title>
+    {% load static %} 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+    <div id="d1" style="height: 1cm;font-weight: bolder;padding-bottom:  5%;padding-left:5% ;font-style: italic;color: darkorange;background-color: white;text-align: center;font-size: 1cm;">
+        <h1><b>SANDEEP</b>.com</h1>
+    </div>
+    <div>
+        <img style="width: 20%;height:15%;position: absolute;top:2%;left: 13%;" src="https://www.teahub.io/photos/full/115-1153347_cars-logo-transparent-background-png.png">
+      </div>
+      <div >
+        <img style="width: 20%;height: 15%;position: absolute;top: 2%;right: 8%;" src="https://pngimg.com/uploads/rolls_royce/rolls_royce_PNG18.png">
+      </div>
+    <hr>
+    <div>
+{% for product in deletes %} 
+    <button id="button1" style="width: 485px;padding: 10px;background-color:rgb(211, 47, 47);">
+        <img src="{{ product.product_img }}" style="width: 7cm;height: 4cm">
+        <p style="color: whitesmoke;font-style: italic;font-weight: bolder;font-size: larger;">ID = {{ product.product_id }}</p>
+        <p style="color: whitesmoke;font-style: italic;font-weight: bolder;font-size: larger;">Product = {{ product.product_name }}</p>
+        <p style="color: whitesmoke;font-style: italic;font-weight: bolder;font-size: larger;">Price = ${{ product.product_price }}</p>
+        <p style="color: whitesmoke;font-style: italic;font-weight: bolder;font-size: larger;">manufacturer = {{ product.product_manu }}</p>
+        <p style="color: whitesmoke;font-style: italic;font-weight: bolder;"><a href="/edit_restore/{{ product.id }}" target="_blank"><span class="glyphicon glyphicon-pencil" style="padding: 1cm;font-size: x-large;color: blue;font-style: italic;text-decoration: none;">restore</span></a><a href="/delete/{{ product.id }}"><span style="padding: 1cm;font-size: x-large;color: blue;font-style: italic;text-decoration: none;">Permanant Delete</span></a></p>
+    </button>
+{% endfor %} 
+    </div>
+    <hr>
+    <div id="d2" style="color: black;text-align: center;font-style: italic;font-weight:bolder;font-size: larger;">
+        <p id="d3" >
+            Sandeep.com Site: International - Español - Português - Deutsch - Français - Italiano - हिंदी - Pусский - 한국어 - 日本語 - اللغة العربية - ภาษาไทย - Türk - Nederlands - tiếng Việt - Indonesian - עברית
+        </p>
+        <p id="d3">
+            Sandeep Group | Taobao Marketplace | Tmall.com | Juhuasuan | AliExpress | Sandeep.com International | 1688.com | Alimama | Alitrip
+            Sandeep Cloud | YunOS | AliTelecom | HiChina | Autonavi | UCWeb | Umeng | Xiami | TTPod | Diandianchong | DingTalk | Alipay
+        </p>
+        <p id="d3">  
+            Product Listing Policy - Intellectual Property Protection - Privacy Policy - Terms of Use
+        </p>
+        <p id="d3">   
+            © 1999-2021 Sandeep.com. All rights reserved.
+        </p>
+    </div>
+</body>
+</html>
